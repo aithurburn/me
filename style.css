@@ -4,25 +4,6 @@ html {
     box-sizing: border-box
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: "Raleway", sans-serif
-}
-
-.w3-third img {
-    margin-bottom: -6px;
-    opacity: 0.8;
-    cursor: pointer
-}
-
-.w3-third img:hover {
-    opacity: 1
-}
-
 *,
 *:before,
 *:after {
@@ -38,7 +19,7 @@ html {
 }
 
 body {
-    margin: 1
+    margin: 0
 }
 
 article,
@@ -236,6 +217,79 @@ textarea {
 ::-webkit-file-upload-button {
     -webkit-appearance: button;
     font: inherit
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato", sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+
+/* Create a Parallax Effect */
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* First image (Logo. Full height) */
+
+.bgimg-1 {
+    background-image: url('./Images/me_image.jpg');
+    min-height: 100%;
+}
+
+
+/* Second image (Portfolio) */
+
+.bgimg-2 {
+    background-image: url("./Images/brain.jpeg");
+    min-height: 400px;
+}
+
+
+/* Third image (Contact) */
+
+.bgimg-3 {
+    background-image: url("./Images/7gs.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {
+    letter-spacing: 10px;
+}
+
+.w3-hover-opacity {
+    cursor: pointer;
+}
+
+
+/* Turn off parallax scrolling for tablets and phones */
+
+@media only screen and (max-device-width: 1600px) {
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 400px;
+    }
 }
 
 
@@ -541,7 +595,8 @@ a {
     width: 200px;
     background-color: #fff;
     position: fixed!important;
-    z-index: 1000;
+    z-index: 1;
+    overflow: auto
 }
 
 .w3-bar-block .w3-dropdown-hover,
@@ -669,8 +724,7 @@ a {
 .w3-threequarter,
 .w3-quarter {
     float: left;
-    width: 100%;
-    margin-left: auto;
+    width: 100%
 }
 
 .w3-col.s1 {
@@ -1081,7 +1135,7 @@ a {
 .w3-row-padding>.w3-threequarter,
 .w3-row-padding>.w3-quarter,
 .w3-row-padding>.w3-col {
-    padding: 0 8px;
+    padding: 0 8px
 }
 
 .w3-container,
@@ -1630,7 +1684,8 @@ a {
 .w3-black,
 .w3-hover-black:hover {
     color: #fff!important;
-    background-color: #000!important
+    background-color: #000!important;
+    opacity: 50%;
 }
 
 .w3-grey,

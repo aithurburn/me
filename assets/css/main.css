@@ -15,7 +15,7 @@ small, strike, strong, sub, sup, tt, var, b,
 u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption,
+canvas, details, embed, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
 	margin: 0;
@@ -24,6 +24,43 @@ section, summary, time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;}
+
+
+
+	figure {
+		display: grid;
+		border-radius: 38px;
+		overflow: hidden;
+		cursor: pointer;
+		margin: 0;
+	padding: 0;
+	border: 10px;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;}
+
+	  figure > * {
+		grid-area: 1/1;
+		transition: .4s;
+	  }
+	  
+	  
+	  @supports not (-webkit-mask-clip: text) {
+		figure figcaption {
+		 -webkit-mask: none;
+		 color: #fff;
+		}
+	  }
+.nav-bar-top {
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+.nav-bar-bottom {
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+}
+
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -97,7 +134,25 @@ input, select, textarea {
 	*, *:before, *:after {
 		box-sizing: inherit;
 	}
+	.skills-packages {
+		display: flex;
+		justify-content: space-between; /* Adjusts space between the elements */
+		flex-wrap: wrap; /* Allows wrapping to the next line if necessary */
+	}
+	
+	.skills-packages dl {
+		flex: 1; /* Makes each dl take equal width */
+		margin: 0 10px; /* Adds some margin between the two lists */
+	}
 
+	.main-photo{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+		border-radius: 38px;
+	}
+	
 	body {
 		background-color: #1e252d;
 	}
@@ -2635,6 +2690,7 @@ input, select, textarea {
 		.image.main {
 			display: block;
 			margin: 4rem 0;
+			border-radius: 15px;
 
 		}
 

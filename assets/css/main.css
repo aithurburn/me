@@ -136,7 +136,7 @@ input, select, textarea {
 	}
 	.skills-packages {
 		display: flex;
-		justify-content: space-between; /* Adjusts space between the elements */
+		justify-content: space-between; /* Adjusts s😁pace between the elements */
 		flex-wrap: wrap; /* Allows wrapping to the next line if necessary */
 	}
 	
